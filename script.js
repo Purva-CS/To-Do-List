@@ -9,7 +9,10 @@ const pendingCountEl = document.getElementById('pendingCount');
 const completedCountEl = document.getElementById('completedCount');
 function addTask() {
   const text = taskInput.value.trim();
-  if (text === '') return;
+  if (text === '') {
+    alert("Please enter a task.")
+    return;
+  }
   const newTask = {
     id: Date.now(),
     text: text,
